@@ -8,7 +8,7 @@
       "description": "Perpaduan espresso, cokelat, dan susu dengan rasa creamy dan aroma kopi yang kuat.",
       "price": 22000,
       "category": "coffee",
-      "image": "/images/menu/mochachino.jpg",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -18,7 +18,7 @@
       "description": "Espresso dengan tambahan air untuk menghasilkan kopi dengan rasa ringan dan clean.",
       "price": 18000,
       "category": "coffee",
-      "image": "/images/menu/americano.jpg",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -28,7 +28,7 @@
       "description": "Espresso dengan steamed milk dan foam lembut dengan rasa kopi yang seimbang.",
       "price": 22000,
       "category": "coffee",
-      "image": "/images/menu/cappuccino.jpg",
+      "image": "https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -38,7 +38,7 @@
       "description": "Espresso dengan susu creamy yang cocok untuk kamu yang menyukai kopi dengan rasa lembut.",
       "price": 23000,
       "category": "coffee",
-      "image": "/images/menu/cafe-latte.jpg",
+      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -48,7 +48,7 @@
       "description": "Espresso, susu, dan caramel dengan rasa manis yang lembut dan aroma khas caramel.",
       "price": 25000,
       "category": "coffee",
-      "image": "/images/menu/caramel-macchiato.jpg",
+      "image": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -58,7 +58,7 @@
       "description": "Cafe latte dengan sentuhan sirup hazelnut yang memberikan aroma kacang yang khas.",
       "price": 25000,
       "category": "coffee",
-      "image": "/images/menu/hazelnut-latte.jpg",
+      "image": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -68,7 +68,7 @@
       "description": "Matcha premium dengan susu creamy dan rasa earthy yang lembut.",
       "price": 24000,
       "category": "non-coffee",
-      "image": "/images/menu/matcha-latte.jpg",
+      "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -78,7 +78,7 @@
       "description": "Minuman cokelat creamy dengan rasa manis dan cokelat yang kuat.",
       "price": 22000,
       "category": "non-coffee",
-      "image": "/images/menu/chocolate-milk.jpg",
+      "image": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -88,7 +88,7 @@
       "description": "Minuman susu dengan rasa taro yang creamy dan manis.",
       "price": 22000,
       "category": "non-coffee",
-      "image": "/images/menu/taro-latte.jpg",
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -98,7 +98,7 @@
       "description": "Teh segar dengan aroma dan rasa buah leci yang manis.",
       "price": 18000,
       "category": "tea",
-      "image": "/images/menu/lychee-tea.jpg",
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -108,7 +108,7 @@
       "description": "Teh segar dengan perasan lemon yang memberikan rasa manis dan sedikit asam.",
       "price": 17000,
       "category": "tea",
-      "image": "/images/menu/lemon-tea.jpg",
+      "image": "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -118,7 +118,7 @@
       "description": "Kentang goreng renyah dengan bumbu gurih yang cocok untuk menemani waktu santai.",
       "price": 18000,
       "category": "snack",
-      "image": "/images/menu/french-fries.jpg",
+      "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -128,7 +128,7 @@
       "description": "Perpaduan croissant dan waffle dengan tekstur renyah di luar dan lembut di dalam.",
       "price": 20000,
       "category": "snack",
-      "image": "/images/menu/croffle.jpg",
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -138,7 +138,7 @@
       "description": "Sayap ayam goreng crispy dengan bumbu gurih dan sedikit pedas.",
       "price": 28000,
       "category": "food",
-      "image": "/images/menu/chicken-wings.jpg",
+      "image": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -148,7 +148,7 @@
       "description": "Nasi hangat dengan chicken katsu crispy dan saus khas cafe.",
       "price": 32000,
       "category": "food",
-      "image": "/images/menu/chicken-katsu-rice.jpg",
+      "image": "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -158,7 +158,7 @@
       "description": "Burger dengan patty beef juicy, sayuran segar, keju, dan saus khas cafe.",
       "price": 35000,
       "category": "food",
-      "image": "/images/menu/beef-burger.jpg",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -168,7 +168,7 @@
       "description": "Spaghetti dengan saus tomat dan daging sapi cincang yang gurih.",
       "price": 30000,
       "category": "food",
-      "image": "/images/menu/spaghetti-bolognese.jpg",
+      "image": "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -178,7 +178,7 @@
       "description": "Potongan cake red velvet lembut dengan cream cheese frosting.",
       "price": 24000,
       "category": "dessert",
-      "image": "/images/menu/red-velvet.jpg",
+      "image": "https://images.unsplash.com/photo-1586788224331-947f68671cf1?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": true
     },
@@ -188,7 +188,7 @@
       "description": "Dessert klasik dengan perpaduan mascarpone, kopi, dan cocoa powder.",
       "price": 26000,
       "category": "dessert",
-      "image": "/images/menu/tiramisu.jpg",
+      "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": true,
       "isAvailable": true
     },
@@ -198,7 +198,7 @@
       "description": "Cheesecake lembut dengan rasa creamy dan sedikit manis.",
       "price": 25000,
       "category": "dessert",
-      "image": "/images/menu/cheesecake.jpg",
+      "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80",
       "isBestSeller": false,
       "isAvailable": false
     }

@@ -1,21 +1,14 @@
-import dataMenus from "../data/menus.json"
+import dataMenus from "../data/menus.json";
 
 class menusServices {
-
-    static async getMenus(): Promise<MenusResponseType | undefined> {
-        try {
-
-            console.log("Data menu dari services:", dataMenus)
-
-            return dataMenus
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error(error);
-                throw new Error(error.message);
-            }
-        }
+  static async getMenus(): Promise<MenusResponseType> {
+    try {
+      return dataMenus;
+    } catch (error) {
+      console.error(error);
+      throw error;
     }
+  }
 }
 
-
-export default menusServices
+export default menusServices;
