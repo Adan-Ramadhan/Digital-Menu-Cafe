@@ -6,7 +6,7 @@ Project ini dibuat sebagai latihan frontend development dengan fokus pada pembua
 
 ## 🚀 Demo
 
-[Live Demo](https://domain-kamu.com)
+[Live Demo](https://digital-menu-cafe-eight.vercel.app/)
 
 ## ✨ Fitur
 
