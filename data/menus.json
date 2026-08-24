@@ -1,0 +1,206 @@
+{
+  "success": true,
+  "message": "Success get data menus",
+  "data": [
+    {
+      "id": 1,
+      "title": "Mochachino",
+      "description": "Perpaduan espresso, cokelat, dan susu dengan rasa creamy dan aroma kopi yang kuat.",
+      "price": 22000,
+      "category": "coffee",
+      "image": "/images/menu/mochachino.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "title": "Americano",
+      "description": "Espresso dengan tambahan air untuk menghasilkan kopi dengan rasa ringan dan clean.",
+      "price": 18000,
+      "category": "coffee",
+      "image": "/images/menu/americano.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 3,
+      "title": "Cappuccino",
+      "description": "Espresso dengan steamed milk dan foam lembut dengan rasa kopi yang seimbang.",
+      "price": 22000,
+      "category": "coffee",
+      "image": "/images/menu/cappuccino.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 4,
+      "title": "Cafe Latte",
+      "description": "Espresso dengan susu creamy yang cocok untuk kamu yang menyukai kopi dengan rasa lembut.",
+      "price": 23000,
+      "category": "coffee",
+      "image": "/images/menu/cafe-latte.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 5,
+      "title": "Caramel Macchiato",
+      "description": "Espresso, susu, dan caramel dengan rasa manis yang lembut dan aroma khas caramel.",
+      "price": 25000,
+      "category": "coffee",
+      "image": "/images/menu/caramel-macchiato.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 6,
+      "title": "Hazelnut Latte",
+      "description": "Cafe latte dengan sentuhan sirup hazelnut yang memberikan aroma kacang yang khas.",
+      "price": 25000,
+      "category": "coffee",
+      "image": "/images/menu/hazelnut-latte.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 7,
+      "title": "Matcha Latte",
+      "description": "Matcha premium dengan susu creamy dan rasa earthy yang lembut.",
+      "price": 24000,
+      "category": "non-coffee",
+      "image": "/images/menu/matcha-latte.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 8,
+      "title": "Chocolate Milk",
+      "description": "Minuman cokelat creamy dengan rasa manis dan cokelat yang kuat.",
+      "price": 22000,
+      "category": "non-coffee",
+      "image": "/images/menu/chocolate-milk.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 9,
+      "title": "Taro Latte",
+      "description": "Minuman susu dengan rasa taro yang creamy dan manis.",
+      "price": 22000,
+      "category": "non-coffee",
+      "image": "/images/menu/taro-latte.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 10,
+      "title": "Lychee Tea",
+      "description": "Teh segar dengan aroma dan rasa buah leci yang manis.",
+      "price": 18000,
+      "category": "tea",
+      "image": "/images/menu/lychee-tea.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 11,
+      "title": "Lemon Tea",
+      "description": "Teh segar dengan perasan lemon yang memberikan rasa manis dan sedikit asam.",
+      "price": 17000,
+      "category": "tea",
+      "image": "/images/menu/lemon-tea.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 12,
+      "title": "French Fries",
+      "description": "Kentang goreng renyah dengan bumbu gurih yang cocok untuk menemani waktu santai.",
+      "price": 18000,
+      "category": "snack",
+      "image": "/images/menu/french-fries.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 13,
+      "title": "Croffle",
+      "description": "Perpaduan croissant dan waffle dengan tekstur renyah di luar dan lembut di dalam.",
+      "price": 20000,
+      "category": "snack",
+      "image": "/images/menu/croffle.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 14,
+      "title": "Chicken Wings",
+      "description": "Sayap ayam goreng crispy dengan bumbu gurih dan sedikit pedas.",
+      "price": 28000,
+      "category": "food",
+      "image": "/images/menu/chicken-wings.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 15,
+      "title": "Chicken Katsu Rice",
+      "description": "Nasi hangat dengan chicken katsu crispy dan saus khas cafe.",
+      "price": 32000,
+      "category": "food",
+      "image": "/images/menu/chicken-katsu-rice.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 16,
+      "title": "Beef Burger",
+      "description": "Burger dengan patty beef juicy, sayuran segar, keju, dan saus khas cafe.",
+      "price": 35000,
+      "category": "food",
+      "image": "/images/menu/beef-burger.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 17,
+      "title": "Spaghetti Bolognese",
+      "description": "Spaghetti dengan saus tomat dan daging sapi cincang yang gurih.",
+      "price": 30000,
+      "category": "food",
+      "image": "/images/menu/spaghetti-bolognese.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 18,
+      "title": "Red Velvet Cake",
+      "description": "Potongan cake red velvet lembut dengan cream cheese frosting.",
+      "price": 24000,
+      "category": "dessert",
+      "image": "/images/menu/red-velvet.jpg",
+      "isBestSeller": false,
+      "isAvailable": true
+    },
+    {
+      "id": 19,
+      "title": "Tiramisu",
+      "description": "Dessert klasik dengan perpaduan mascarpone, kopi, dan cocoa powder.",
+      "price": 26000,
+      "category": "dessert",
+      "image": "/images/menu/tiramisu.jpg",
+      "isBestSeller": true,
+      "isAvailable": true
+    },
+    {
+      "id": 20,
+      "title": "Cheesecake",
+      "description": "Cheesecake lembut dengan rasa creamy dan sedikit manis.",
+      "price": 25000,
+      "category": "dessert",
+      "image": "/images/menu/cheesecake.jpg",
+      "isBestSeller": false,
+      "isAvailable": false
+    }
+  ]
+}
