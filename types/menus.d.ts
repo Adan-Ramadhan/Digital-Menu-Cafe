@@ -7,6 +7,7 @@ interface MenusResponseType {
 interface MenusListType {
     id: number
     title: string
+    slug: string
     description: string
     price: number,
     category: string

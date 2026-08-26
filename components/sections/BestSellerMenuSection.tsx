@@ -1,5 +1,6 @@
 import { useMenus } from "@/hooks/useMenus";
 import Image from "next/image";
+import MenuCard from "../MenuCard";
 
 const BestSellerMenuSection = () => {
   const { data, isLoading } = useMenus();
@@ -30,28 +31,11 @@ const BestSellerMenuSection = () => {
           {bestSellerMenu && bestSellerMenu?.length > 0 ? (
             bestSellerMenu?.map((item: MenusListType, index: number) => {
               return (
-                <div key={index} className="w-72 shrink-0 border-b border-gray-200 p-4">
-                  <div className=" h-64 relative mb-4 overflow-hidden rounded-lg">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-full object-cover cursor-pointer object-center transition-transform duration-300 hover:scale-110"
-                    />
-                  </div>
-                  <h4 className="font-semibold text-lg hover:text-orange-400 transition-colors duration-300 cursor-pointer">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600">{item.description}</p>
-                  <p className="font-bold text-xl">
-                    Rp {item.price.toLocaleString()}
-                  </p>
-                </div>
+                <MenuCard menu={item} index={index} />
               );
             })
           ) : (
-            <p className="text-center text-gray-500">Menu not found</p>
+            <p className="text-center text-gray-500">Menu not Avaiable</p>
           )}
         </div>
 
