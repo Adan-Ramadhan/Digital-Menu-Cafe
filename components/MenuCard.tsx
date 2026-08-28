@@ -13,7 +13,7 @@ const MenuCard = ({ menu, index }: menuProp) => {
 
 
     return (
-        <div key={index} className="border-b shrink-0 border-gray-200 p-4">
+        <div key={index} className="w-full md:w-72 border-b shrink-0 border-gray-200 p-4">
             <Link href={`/menu/${slug}`}>
                 <div className="w-full h-64 relative mb-4 overflow-hidden rounded-lg">
                     <Image
