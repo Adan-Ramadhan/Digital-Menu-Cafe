@@ -22,8 +22,8 @@ const DetailMenu = () => {
         <div className="w-full ">
             <div className="w-full py-6 p-4">
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="w-full rounded-xl h-64 relative overflow-hidden">
-                        <Image src={image} alt={title} fill className="object-cover object-center" />
+                    <div className="w-full  rounded-xl h-72 relative overflow-hidden">
+                        <Image src={image} alt={title} fill className="object-cover" />
                     </div>
 
                     {/* start menu content */}

@@ -31,7 +31,9 @@ const BestSellerMenuSection = () => {
           {bestSellerMenu && bestSellerMenu?.length > 0 ? (
             bestSellerMenu?.map((item: MenusListType, index: number) => {
               return (
-                <MenuCard menu={item} index={index} />
+                <div key={index * 2}>
+                  <MenuCard menu={item} index={index} />
+                </div>
               );
             })
           ) : (

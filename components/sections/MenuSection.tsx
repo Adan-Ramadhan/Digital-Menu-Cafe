@@ -76,19 +76,19 @@ const MenuSection = () => {
         </nav>
         {/* end navigation menu */}
         {/* start menu items */}
-
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           {filterMenu && filterMenu?.length > 0 ? (
-            filterMenu?.map((item: MenusListType, index: number) => {
+            filterMenu?.map((item: MenusListType) => {
               return (
-                <MenuCard menu={item} index={index} />
+                <div key={item.id}>
+                  <MenuCard menu={item} index={item.id} />
+                </div>
               );
             })
           ) : (
             <p className="text-center text-gray-500">Menu not found</p>
           )}
         </div>
-
         {/* end menu items */}
       </div>
     </section>
