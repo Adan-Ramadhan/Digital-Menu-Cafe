@@ -9,7 +9,7 @@ import SearchSection from "../sections/SearchSection";
 
 const queryClient = new QueryClient();
 
-const LandingPageSheel = () => {
+const MainLayout = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="w-full xl:w-1/2 mx-auto shadow-lg bg-white">
@@ -23,4 +23,4 @@ const LandingPageSheel = () => {
   );
 };
 
-export default LandingPageSheel;
+export default MainLayout;

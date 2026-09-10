@@ -1,7 +1,5 @@
-import LandingPageSheel from "@/components/layouts/LandingPageSheel";
+import MainLayout from "@/components/layouts/MainLayout";
 
 export default function Home() {
-  return (
-    <LandingPageSheel />
-  );
+  return <MainLayout />;
 }

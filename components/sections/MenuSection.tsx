@@ -76,7 +76,7 @@ const MenuSection = () => {
         </nav>
         {/* end navigation menu */}
         {/* start menu items */}
-        <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="w-full mx-auto flex flex-wrap justify-center gap-4 p-3">
           {filterMenu && filterMenu?.length > 0 ? (
             filterMenu?.map((item: MenusListType) => {
               return (

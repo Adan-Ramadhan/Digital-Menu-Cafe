@@ -27,11 +27,11 @@ const BestSellerMenuSection = () => {
 
         {/* start menu items */}
 
-        <div className="w-full flex p-4 gap-x-4 overflow-x-auto">
+        <div className="w-full flex p-4 gap-x-4 overflow-x-auto ">
           {bestSellerMenu && bestSellerMenu?.length > 0 ? (
             bestSellerMenu?.map((item: MenusListType, index: number) => {
               return (
-                <div key={index * 2}>
+                <div key={item.id} className="shrink-0 w-full md:shrink">
                   <MenuCard menu={item} index={index} />
                 </div>
               );
