@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import MenuCard from "../MenuCard";
+import { Skeleton } from "../ui/skeleton";
 
 interface MenuNavigationType {
   title: string;
@@ -35,8 +36,8 @@ const MenuSection = () => {
 
   if (isLoading) {
     return (
-      <div className="w-full h-[300px] flex items-center justify-center">
-        <p>Loading menus...</p>
+      <div className="w-full  flex items-center justify-center">
+        <Skeleton className="w-72 h-4"/>
       </div>
     );
   }
