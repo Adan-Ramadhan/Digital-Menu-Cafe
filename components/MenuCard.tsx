@@ -47,7 +47,7 @@ const MenuCard = ({ menu, index }: menuProp) => {
                 {stock} Item Left
               </Badge>
             ) : (
-              <Badge variant={"default"} className="shrink-0">
+              <Badge variant={"success"} className="shrink-0">
                 In Stock
               </Badge>
             )}

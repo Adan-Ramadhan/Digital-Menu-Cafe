@@ -16,3 +16,16 @@ interface MenusListType {
   isAvailable: boolean;
   stock: number;
 }
+
+interface CartItem extends MenusListType {
+  quantity: number;
+}
+
+interface CartStore {
+  cart: CartItem[];
+
+  addToCart: (menu: MenusListType) => void;
+  removeFromCart: (id: number) => void;
+  increaseQuantity: (id: number) => void;
+  decreaseQuantity: (id: number) => void;
+}

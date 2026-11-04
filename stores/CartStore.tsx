@@ -1,23 +1,62 @@
 import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
 
-interface CounterStore {
-  count: number;
-  increment: () => void;
-  decrement: () => void;
-}
+const useCartStore = create<CartStore>()(
+  persist(
+    (set) => ({
+      cart: [],
 
-const useCounterStore = create<CounterStore>((set) => ({
-  count: 0,
+      addToCart: (menu) =>
+        set((state) => {
+          const existingItem = state.cart.find(
+            (item) => item.id === menu.id,
+          );
 
-  increment: () =>
-    set((state) => ({
-      count: state.count + 1,
-    })),
+          if (existingItem) {
+            return {
+              cart: state.cart.map((item) =>
+                item.id === menu.id
+                  ? { ...item, quantity: item.quantity + 1 }
+                  : item,
+              ),
+            };
+          }
 
-  decrement: () =>
-    set((state) => ({
-      count: state.count - 1,
-    })),
-}));
+          return {
+            cart: [...state.cart, { ...menu, quantity: 1 }],
+          };
+        }),
 
-export default useCounterStore;
+      removeFromCart: (id) =>
+        set((state) => ({
+          cart: state.cart.filter((item) => item.id !== id),
+        })),
+
+      increaseQuantity: (id) =>
+        set((state) => ({
+          cart: state.cart.map((item) =>
+            item.id === id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item,
+          ),
+        })),
+
+      decreaseQuantity: (id) =>
+        set((state) => ({
+          cart: state.cart
+            .map((item) =>
+              item.id === id
+                ? { ...item, quantity: item.quantity - 1 }
+                : item,
+            )
+            .filter((item) => item.quantity > 0),
+        })),
+    }),
+    {
+      name: "product-cart",
+      storage: createJSONStorage(() => localStorage),
+    },
+  ),
+);
+
+export default useCartStore;

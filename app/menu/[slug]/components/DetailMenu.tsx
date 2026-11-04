@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useMenu } from "@/hooks/useMenus";
+import useCartStore from "@/stores/CartStore";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 // icons
@@ -12,15 +13,16 @@ const DetailMenu = () => {
   const params = useParams<{ slug: string }>();
   const slug = params.slug;
   const { data, isLoading } = useMenu(slug);
-  if (isLoading) return <p>Loading data...</p>;
-  const { title, image, description, price, stock } = data as MenusListType;
+
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  if (isLoading || !data) return <p>Loading data...</p>;
+  const { title, image, description, price, stock } = data;
+
+console.log("data:", data)
 
   const isOutOfStock = (stock ?? 0) === 0;
   const isLowOfStock = (stock ?? 0) > 0 && (stock ?? 0) <= 10;
-
-  const handleAddToCart = () => {
-    console.log("Added To Cart:", "Name:", title, "Price:", price);
-  };
 
   return (
     <div className="w-full ">
@@ -46,7 +48,9 @@ const DetailMenu = () => {
                   {stock} Item Left
                 </Badge>
               ) : (
-                <Badge className="shrink-0 bg-green-500">Avaiable</Badge>
+                <Badge variant={"success"} className="shrink-0 ">
+                  Avaiable
+                </Badge>
               )}
               {/* end stock status badge */}
             </div>
@@ -56,7 +60,7 @@ const DetailMenu = () => {
             </p>
             <Button
               disabled={isOutOfStock}
-              onClick={handleAddToCart}
+              onClick={() => addToCart(data)}
               className="bg-orange-400 hover:bg-amber-600 transition-colors duration-300 cursor-pointer mt-3 rounded-full px-6 py-2 font-semibold text-white flex items-center gap-3"
             >
               {isOutOfStock ? "Sold Out" : "Add to Cart"}
