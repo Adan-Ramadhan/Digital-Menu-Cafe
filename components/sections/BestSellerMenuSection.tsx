@@ -1,3 +1,5 @@
+"use client"
+
 import { useMenus } from "@/hooks/useMenus";
 import Image from "next/image";
 import MenuCard from "../MenuCard";

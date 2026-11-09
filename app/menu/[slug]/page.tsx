@@ -1,14 +1,13 @@
-import DetailMenuSheel from "./components/DetailMenuShell"
-
+import BestSellerMenuSection from "@/components/sections/BestSellerMenuSection";
+import DetailMenu from "./components/DetailMenu";
 
 const DetailMenuPage = () => {
+  return (
+    <>
+      <DetailMenu />
+      <BestSellerMenuSection />
+    </>
+  );
+};
 
-
-    return (
-        <>
-            <DetailMenuSheel  />
-        </>
-    )
-}
-
-export default DetailMenuPage
+export default DetailMenuPage;

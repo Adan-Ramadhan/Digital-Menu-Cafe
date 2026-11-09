@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 const Header = () => {
   const menuInCart = useCartStore((state) => state.cart);
 
-  const allMenuInCart = menuInCart.map((m) => m.quantity);
+  const totalQty = menuInCart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className="w-full p-4 bg-amber-800">
@@ -23,9 +23,9 @@ const Header = () => {
             <div className="text-white text-xl cursor-pointer hover:text-gray-300 relative">
               <FaShoppingCart />
 
-              {allMenuInCart.length > 0 && (
+              {totalQty > 0 && (
                 <span className="absolute bg-red-600 text-white font-normal text-center text-xs w-5 h-5 -top-3 -left-2 rounded-full">
-                  {allMenuInCart}
+                  {totalQty}
                 </span>
               )}
             </div>

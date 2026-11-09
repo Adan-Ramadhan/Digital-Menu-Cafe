@@ -12,12 +12,24 @@ export default function ShoppingCartPage() {
   const decreaseQty = useCartStore((state) => state.decreaseQuantity);
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full  p-4">
       <div className="w-full bg-white shadow p-3 rounded-lg">
         <h1 className="font-bold text-2xl">Shopping Cart</h1>
         <div className="w-full mt-4 flex flex-col gap-4">
           {carts.length > 0 ? (
             carts.map((cart) => {
+              const countQty = cart.price * cart.quantity;
+
+              function handleAlertDeteleProduct() {
+                if (cart.quantity === 1) {
+                  const confirmed = confirm("Yakin mau menghapus item ini?");
+
+                  if (!confirmed) return;
+                }
+
+                decreaseQty(cart.id);
+              }
+
               return (
                 <div
                   key={cart.id}
@@ -35,14 +47,9 @@ export default function ShoppingCartPage() {
                   </div>
 
                   <div className=" col-span-2 place-content-center">
-                    <div className="flex justify-between items-center">
-                      <h3 className="font-semibold">{cart.title}</h3>
-                      <p className="font-light text-sm text-gray-500">
-                        x{cart.quantity}
-                      </p>
-                    </div>
-                    <p className="font-semibold text-lg">
-                      Rp{cart.price * cart.quantity}
+                    <h3 className="font-semibold text-lg">{cart.title}</h3>
+                    <p className="font-semibold  text-lg">
+                      Rp{countQty.toLocaleString()}
                     </p>
                   </div>
 
@@ -53,10 +60,13 @@ export default function ShoppingCartPage() {
                     >
                       +
                     </Button>
+                    <p className="font-light place-self-center text-sm text-gray-500">
+                      x{cart.quantity}
+                    </p>
                     <Button
                       variant={"outline"}
-                      onClick={() => decreaseQty(cart.id)}
-                    className={`${cart.quantity > 1 ? "bg-white": "bg-red-500"}`}
+                      onClick={handleAlertDeteleProduct}
+                      className={`${cart.quantity > 1 ? "bg-white" : "bg-red-500"}`}
                     >
                       {cart.quantity > 1 ? "-" : <Trash />}
                     </Button>

@@ -6,17 +6,18 @@ import MenuSection from "../sections/MenuSection";
 import BestSellerMenuSection from "../sections/BestSellerMenuSection";
 import Footer from "./Footer";
 import SearchSection from "../sections/SearchSection";
+import { ReactNode } from "react";
 
 const queryClient = new QueryClient();
 
-const MainLayout = () => {
+const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="w-full xl:w-1/2 mx-auto shadow-lg bg-white">
         <Header />
-        <SearchSection />
-        <BestSellerMenuSection />
-        <MenuSection />
+
+        {children}
+
         <Footer />
       </div>
     </QueryClientProvider>

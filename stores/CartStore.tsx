@@ -8,9 +8,7 @@ const useCartStore = create<CartStore>()(
 
       addToCart: (menu) =>
         set((state) => {
-          const existingItem = state.cart.find(
-            (item) => item.id === menu.id,
-          );
+          const existingItem = state.cart.find((item) => item.id === menu.id);
 
           if (existingItem) {
             return {
@@ -35,9 +33,7 @@ const useCartStore = create<CartStore>()(
       increaseQuantity: (id) =>
         set((state) => ({
           cart: state.cart.map((item) =>
-            item.id === id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item,
+            item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
           ),
         })),
 
@@ -45,11 +41,13 @@ const useCartStore = create<CartStore>()(
         set((state) => ({
           cart: state.cart
             .map((item) =>
-              item.id === id
-                ? { ...item, quantity: item.quantity - 1 }
-                : item,
+              item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
             )
             .filter((item) => item.quantity > 0),
+        })),
+      clearCart: () =>
+        set(() => ({
+          cart: [],
         })),
     }),
     {

@@ -1,5 +1,13 @@
-import MainLayout from "@/components/layouts/MainLayout";
+import BestSellerMenuSection from "@/components/sections/BestSellerMenuSection";
+import MenuSection from "@/components/sections/MenuSection";
+import SearchSection from "@/components/sections/SearchSection";
 
 export default function Home() {
-  return <MainLayout />;
+  return (
+    <>
+      <SearchSection />
+      <BestSellerMenuSection />
+      <MenuSection />
+    </>
+  );
 }

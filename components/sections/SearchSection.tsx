@@ -1,3 +1,4 @@
+"use client"
 import { useMenus } from "@/hooks/useMenus";
 import { useState } from "react";
 import MenuCard from "../MenuCard";
