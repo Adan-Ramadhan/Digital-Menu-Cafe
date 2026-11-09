@@ -1,12 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useMenu, useMenus } from "@/hooks/useMenus";
+import { useMenus } from "@/hooks/useMenus";
 import useCartStore from "@/stores/CartStore";
 
 export default function CheckoutPage() {
+  const { data } = useMenus();
   const cart = useCartStore((state) => state.cart);
-  const clearCart = useCartStore((state) => state.clearCart);
 
   const totalQty = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce(
@@ -14,11 +14,24 @@ export default function CheckoutPage() {
     0,
   );
 
-  const menuInCart = cart.map((menu) => menu.quantity);
-
-  console.log("menu cart:", menuInCart);
-
+  const clearCart = useCartStore((state) => state.clearCart);
   function handleCheckout() {
+    if (!data?.data) {
+      alert("Data produk belum tersedia");
+      return;
+    }
+
+    const isStockInsufficient = cart.some((item) => {
+      const product = data.data.find((menu) => menu.id === item.id);
+
+      return !product || item.quantity > product.stock;
+    });
+
+    if (isStockInsufficient) {
+      alert("Stock produk tidak cukup");
+      return;
+    }
+
     clearCart();
     alert("Thanks for shopping");
   }
