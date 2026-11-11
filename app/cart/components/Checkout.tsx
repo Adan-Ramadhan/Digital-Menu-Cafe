@@ -16,13 +16,13 @@ export default function CheckoutPage() {
 
   const clearCart = useCartStore((state) => state.clearCart);
   function handleCheckout() {
-    if (!data?.data) {
-      alert("Data produk belum tersedia");
+    if (cart.length === 0) {
+      alert("Cart masih kosong");
       return;
     }
 
     const isStockInsufficient = cart.some((item) => {
-      const product = data.data.find((menu) => menu.id === item.id);
+      const product = data?.data.find((menu) => menu.id === item.id);
 
       return !product || item.quantity > product.stock;
     });

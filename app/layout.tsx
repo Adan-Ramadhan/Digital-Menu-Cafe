@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         inter.variable,
       )}
     >
-      <body className="min-h-full flex flex-col bg-gray-100">
+      <body className="w-full min-h-auto flex flex-col bg-gray-100">
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

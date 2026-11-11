@@ -34,10 +34,15 @@ const MenuSection = () => {
 
   const { data, isLoading } = useMenus();
 
+
+
   if (isLoading) {
     return (
-      <div className="w-full  flex items-center justify-center">
-        <Skeleton className="w-72 h-4"/>
+      <div className="w-full h-75 overflow-hidden relative flex items-center justify-center flex-wrap gap-3">
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
       </div>
     );
   }
@@ -51,7 +56,7 @@ const MenuSection = () => {
   );
 
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden relative">
       <div className="w-full py-6 p-4">
         <h3 className="text-center font-bold text-slate-700 text-2xl uppercase">
           Daftar Menu

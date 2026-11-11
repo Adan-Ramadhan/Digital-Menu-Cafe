@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { useMenus } from "@/hooks/useMenus";
 import Image from "next/image";
 import MenuCard from "../MenuCard";
+import { Skeleton } from "../ui/skeleton";
 
 const BestSellerMenuSection = () => {
   const { data, isLoading } = useMenus();
@@ -13,14 +14,17 @@ const BestSellerMenuSection = () => {
 
   if (isLoading) {
     return (
-      <div className="w-full h-[300px] flex items-center justify-center">
-        <p>Loading best seller menus...</p>
+      <div className="w-full h-75 overflow-hidden relative flex items-center justify-center flex-wrap gap-3">
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
+        <Skeleton className="h-32 w-75 rounded-lg" />
       </div>
     );
   }
 
   return (
-    <section className="w-full ">
+    <section className="w-full overflow-hidden relative">
       <div className="w-full py-6 p-4">
         <h3 className="text-left mb-2 font-bold text-slate-700 text-2xl uppercase">
           Best Seller
