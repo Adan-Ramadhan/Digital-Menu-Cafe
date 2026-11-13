@@ -19,6 +19,7 @@ export default function FormContactPage() {
       name: formData.get("name"),
       email: formData.get("email"),
       noHp: formData.get("noHp"),
+      subject: formData.get("subject"),
       message: formData.get("message"),
     };
 
@@ -31,13 +32,16 @@ export default function FormContactPage() {
         body: JSON.stringify(data),
       });
 
+      console.log("Data di submit:", data)
       const result = await response.json();
 
+      console.log("Result form:", result)
+
       if (!response.ok) {
-        throw new Error(result.message);
+        throw new Error(result.errors.message);
       }
 
-      setStatus("Pesan berhasil dikirim!");
+      setStatus(result.message);
       event.currentTarget.reset();
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Terjadi kesalahan");
@@ -140,7 +144,7 @@ export default function FormContactPage() {
           {isLoading ? "Process submit..." : "Submit"}
         </Button>
 
-        {status && <p role="status" className="text-sm text-center">{status}</p>}
+        {status && <p role="status" className={`${status } text-sm text-red-600 text-center`}>Warning: {status}</p>}
       </form>
     </section>
   );
