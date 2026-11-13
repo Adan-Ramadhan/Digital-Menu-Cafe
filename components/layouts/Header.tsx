@@ -7,6 +7,7 @@ import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 interface navigationMenusType {
   id: number;
@@ -30,6 +31,8 @@ const navigationMenus: navigationMenusType[] = [
 const Header = () => {
   const menuInCart = useCartStore((state) => state.cart);
   const [isShowNavigation, setIsShowNavigation] = useState<boolean>(false);
+  const path = usePathname();
+
   const totalQty = menuInCart.reduce((total, item) => total + item.quantity, 0);
 
   function handleHamburgerOpen() {
@@ -50,14 +53,18 @@ const Header = () => {
                 return (
                   <ul key={nav.id}>
                     <Link href={nav.url}>
-                      <li className={`font-semibold hover:text-amber-400 transition-colors cursor-pointer duration-300 text-white`}>{nav.title}</li>
+                      <li
+                        className={`${nav.url === path ? "text-amber-400" : "text-white"} font-semibold hover:text-amber-400 transition-colors cursor-pointer duration-300 `}
+                      >
+                        {nav.title}
+                      </li>
                     </Link>
                   </ul>
                 );
               })}
           </div>
 
-          <button className="rounded-full px-6 cursor-pointer py-2 hover:bg-amber-600 transition-colors duration-300 bg-orange-400 text-white font-semibold">
+          <button className="rounded-full px-4 cursor-pointer py-2 hover:bg-amber-600 transition-colors duration-300 bg-orange-400 text-white font-semibold text-sm">
             Order Now
           </button>
 
@@ -73,8 +80,11 @@ const Header = () => {
             </div>
           </Link>
 
-
-          <Button variant={"link"} onClick={handleHamburgerOpen} className="block lg:hidden">
+          <Button
+            variant={"link"}
+            onClick={handleHamburgerOpen}
+            className="block lg:hidden text-white"
+          >
             <Menu size={60} />
           </Button>
         </div>

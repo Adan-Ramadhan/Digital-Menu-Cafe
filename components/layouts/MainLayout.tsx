@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="w-full min-h-auto xl:w-1/2 mx-auto shadow-lg bg-white">
+      <div className="w-full min-h-screen xl:w-1/2 relative mx-auto shadow-lg bg-white">
         <Header />
 
         {children}

@@ -57,7 +57,7 @@ const MenuSection = () => {
 
   return (
     <section className="w-full overflow-hidden relative">
-      <div className="w-full py-6 p-4">
+      <div className="w-full py-16  p-4">
         <h3 className="text-center font-bold text-slate-700 text-2xl uppercase">
           Daftar Menu
         </h3>
