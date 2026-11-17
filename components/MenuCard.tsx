@@ -30,6 +30,7 @@ const MenuCard = ({ menu, index }: menuProp) => {
               alt={title}
               width={300}
               height={200}
+              loading="eager"
               className="w-full h-full object-cover cursor-pointer object-center transition-transform duration-300 hover:scale-110"
             />
           </div>

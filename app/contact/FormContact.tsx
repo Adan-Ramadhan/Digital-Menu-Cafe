@@ -9,11 +9,11 @@ export default function FormContactPage() {
 
   async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    const form = event.currentTarget;
     setIsLoading(true);
     setStatus("");
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
 
     const data = {
       name: formData.get("name"),
@@ -32,23 +32,23 @@ export default function FormContactPage() {
         body: JSON.stringify(data),
       });
 
-      console.log("Data di submit:", data)
       const result = await response.json();
 
-      console.log("Result form:", result)
-
       if (!response.ok) {
-        throw new Error(result.errors.message);
+        throw new Error(result.message);
       }
 
+
       setStatus(result.message);
-      event.currentTarget.reset();
+
+      form.reset();
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Terjadi kesalahan");
     } finally {
       setIsLoading(false);
     }
   }
+
 
   return (
     <section className="w-full p-4">
@@ -58,7 +58,7 @@ export default function FormContactPage() {
       >
         <div className="w-full">
           <label
-            htmlFor="name"
+            htmlFor="email"
             className="block font-semibold text-md tracking-wider"
           >
             Email
@@ -83,7 +83,9 @@ export default function FormContactPage() {
           <input
             id="noHp"
             name="noHp"
-            type="number"
+            type="tel"
+            minLength={10}
+            maxLength={15}
             required
             placeholder="Input your number here..."
             className="w-full border p-1 rounded focus:outline-amber-400 focus:outline mt-1"
@@ -144,7 +146,11 @@ export default function FormContactPage() {
           {isLoading ? "Process submit..." : "Submit"}
         </Button>
 
-        {status && <p role="status" className={`${status } text-sm text-red-600 text-center`}>Warning: {status}</p>}
+        {status && (
+          <p role="status" className={`text-sm text-gray-600 text-center`}>
+            {status}
+          </p>
+        )}
       </form>
     </section>
   );
