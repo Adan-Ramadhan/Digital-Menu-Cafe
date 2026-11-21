@@ -2,10 +2,18 @@ import { contactSchema } from "@/schemas/formValidation";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      return Response.json(
+        { error: "Resend API Key is not configured" },
+        { status: 500 },
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const body = await request.json();
     const result = contactSchema.safeParse(body);
 
@@ -41,7 +49,6 @@ export async function POST(request: Request) {
         { status: 500 },
       );
     }
-
 
     return NextResponse.json({
       message: "Pesan berhasil diterima",
