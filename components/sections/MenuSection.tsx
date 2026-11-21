@@ -13,6 +13,9 @@ interface MenuNavigationType {
 
 const menuNavigation: MenuNavigationType[] = [
   {
+    title: "all",
+  },
+  {
     title: "coffee",
   },
   {
@@ -30,11 +33,9 @@ const menuNavigation: MenuNavigationType[] = [
 ];
 
 const MenuSection = () => {
-  const [isActive, setIsActive] = useState("coffee");
+  const [isCategory, setIsCategory] = useState("all");
 
   const { data, isLoading } = useMenus();
-
-
 
   if (isLoading) {
     return (
@@ -48,12 +49,13 @@ const MenuSection = () => {
   }
 
   function handleActiveMenu(title: string) {
-    setIsActive(title);
+    setIsCategory(title);
   }
 
-  const filterMenu = data?.data.filter(
-    (item: { category: string }) => item.category === isActive,
-  );
+  const filterMenu = data?.data.filter((menu: { category: string }) => {
+    if (isCategory === "all") return true;
+    return menu.category === isCategory;
+  });
 
   return (
     <section className="w-full overflow-hidden relative">
@@ -64,13 +66,13 @@ const MenuSection = () => {
 
         {/* start navigation menu */}
         <nav className="w-full p-4">
-          <ul className="flex items-center gap-x-4 overflow-x-auto">
+          <ul className="flex  gap-x-4 items-center justify-center overflow-x-auto">
             {menuNavigation.length > 0 &&
               menuNavigation.map((item, index) => {
                 return (
                   <li key={index} className="py-4">
                     <button
-                      className={`px-4 py-2 rounded-full ${isActive === item.title ? "bg-orange-400 text-white" : "bg-gray-100 text-slate-700"} font-semibold hover:bg-orange-400 hover:text-white transition-colors duration-300 cursor-pointer uppercase whitespace-nowrap `}
+                      className={`px-4 py-2 rounded-full ${isCategory === item.title ? "bg-orange-400 text-white" : "bg-gray-100 text-slate-700"} font-semibold hover:bg-orange-400 hover:text-white transition-colors duration-300 cursor-pointer uppercase whitespace-nowrap `}
                       onClick={() => handleActiveMenu(item.title)}
                     >
                       {item.title}

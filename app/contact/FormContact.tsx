@@ -38,7 +38,6 @@ export default function FormContactPage() {
         throw new Error(result.message);
       }
 
-
       setStatus(result.message);
 
       form.reset();
@@ -49,9 +48,15 @@ export default function FormContactPage() {
     }
   }
 
-
   return (
     <section className="w-full p-4">
+      <h1 className="font-bold uppercase text-xl">
+        Get In <span className="text-amber-600">Touch</span>
+      </h1>
+      <p className="text-sm text-gray-500 mb-4">
+        Konsultasikan kebutuhan anda, tim support kami siap melayani dan
+        memberikan edukasi terkait kendala atau pertanyaan terkait pesanan anda.
+      </p>
       <form
         onSubmit={handleFormSubmit}
         className="rounded-lg border p-4 flex flex-col gap-4"

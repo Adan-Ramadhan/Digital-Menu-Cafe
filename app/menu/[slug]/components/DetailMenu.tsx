@@ -19,8 +19,6 @@ const DetailMenu = () => {
   if (isLoading || !data) return <p>Loading data...</p>;
   const { title, image, description, price, stock } = data;
 
-console.log("data:", data)
-
   const isOutOfStock = (stock ?? 0) === 0;
   const isLowOfStock = (stock ?? 0) > 0 && (stock ?? 0) <= 10;
 

@@ -12,13 +12,12 @@ class menusServices {
 
   static async getMenuSlug(slug: string): Promise<MenusListType | undefined> {
     try {
-      const menu = await dataMenus.data.find(item => item.slug === slug)
+      const menu = await dataMenus.data.find((item) => item.slug === slug);
 
-
-      return menu
+      return menu;
     } catch (error) {
-      console.error(error)
-      throw error
+      console.error(error);
+      throw error;
     }
   }
 }
